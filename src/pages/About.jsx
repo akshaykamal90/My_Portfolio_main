@@ -27,7 +27,7 @@ const Header = memo(() => (
 
 // ✅ Profile Image Section
 const ProfileImage = memo(() => (
-    <div className="flex justify-end items-center sm:p-12 p-0 py-2">
+    <div className="flex justify-center lg:justify-end items-center p-4 sm:p-12">
         <div className="relative group" data-aos="fade-up" data-aos-duration="1000">
             <div className="absolute -inset-6 opacity-[25%] z-0 hidden sm:block">
                 <div className="absolute inset-0 bg-gradient-to-r from-violet-600 via-indigo-500 to-purple-600 rounded-full blur-2xl animate-spin-slower" />

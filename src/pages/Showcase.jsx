@@ -113,7 +113,7 @@ const Showcase = () => {
             </div>
 
             {/* Projects Showcase */}
-            <div className="flex flex-col md:flex-row justify-center w-full max-w-7xl mx-auto md:h-[400px] md:space-x-4 space-y-4 md:space-y-0">
+            <div className="flex flex-col md:flex-row justify-center w-full max-w-7xl mx-auto md:h-[450px] lg:h-[500px] md:space-x-4 space-y-4 md:space-y-0">
                 {projects.map((project) => {
                     const isActive = activeId === project.id;
                     const isAnyActive = activeId !== null;

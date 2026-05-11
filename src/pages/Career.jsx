@@ -151,9 +151,9 @@ export default function Career() {
             </div>
 
             {/* Desktop Layout */}
-            <div className="hidden md:grid grid-cols-3 gap-10 relative">
+            <div className="hidden md:flex justify-center gap-10 lg:gap-20 relative max-w-7xl mx-auto w-full px-6">
                 {/* Left Column - Roles */}
-                <div className="relative flex left-44 flex-col gap-44">
+                <div className="relative flex flex-1 flex-col gap-32 text-right items-end py-10">
                     {experiences.map((exp, i) => (
                         <motion.div
                             key={i}
@@ -163,16 +163,17 @@ export default function Career() {
                                 y: scrollProgress > i * 0.25 ? 0 : 50,
                             }}
                             transition={{ duration: 0.6 }}
+                            className="flex flex-col justify-center min-h-[200px]"
                         >
                             <div className="text-lg text-purple-400 mb-1">{exp.year}</div>
-                            <h3 className="text-4xl font-bold">{exp.role}</h3>
-                            <p className="text-purple-400">{exp.company}</p>
+                            <h3 className="text-3xl lg:text-4xl font-bold">{exp.role}</h3>
+                            <p className="text-purple-400 mt-2">{exp.company}</p>
                         </motion.div>
                     ))}
                 </div>
 
                 {/* Middle Column - Timeline */}
-                <div className="relative flex justify-center">
+                <div className="relative flex justify-center w-8 shrink-0">
                     <div
                         className="absolute top-0 w-[3px] bg-gradient-to-b from-purple-500 via-purple-400 to-transparent"
                         style={{ height: `${scrollProgress * 100}%` }}
@@ -189,11 +190,11 @@ export default function Career() {
                 </div>
 
                 {/* Right Column - Descriptions */}
-                <div className=" relative left-[-90px] text-lg flex flex-col gap-24">
+                <div className="relative flex flex-1 flex-col gap-32 text-lg py-10">
                     {experiences.map((exp, i) => (
                         <motion.p
                             key={i}
-                            className="font-exo text-gray-300 max-w-md"
+                            className="font-exo text-gray-300 max-w-md flex flex-col justify-center min-h-[200px]"
                             initial={{ opacity: 0, y: 50 }}
                             animate={{
                                 opacity: scrollProgress > i * 0.25 ? 1 : 0,

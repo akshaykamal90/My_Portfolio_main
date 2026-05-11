@@ -132,8 +132,8 @@ const Home = () => {
 
     return (
         <div className="min-h-screen bg-[#030014] overflow-hidden" id="Home">
-            <div className="container mx-auto px-[5%] sm:px-6 lg:px-0 min-h-screen">
-                <div className="flex flex-col lg:flex-row items-center justify-center h-screen md:justify-between gap-12 lg:gap-20">
+            <div className="container mx-auto px-[5%] sm:px-6 lg:px-[10%] min-h-screen">
+                <div className="flex flex-col lg:flex-row items-center justify-center min-h-screen py-24 lg:py-0 md:justify-between gap-12 lg:gap-20">
 
                     {/* Left Section */}
                     <div
@@ -192,7 +192,7 @@ const Home = () => {
 
                     {/* Sidebar Social Icons */}
                     <aside
-                        className="fixed flex flex-col gap-6 text-gray-400
+                        className="fixed hidden md:flex flex-col gap-6 text-gray-400
              left-7 bottom-7
              md:left-14 md:bottom-12
              z-50"
