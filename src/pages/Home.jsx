@@ -137,7 +137,7 @@ const Home = () => {
 
                     {/* Left Section */}
                     <div
-                        className="w-full lg:w-1/2 space-y-8 text-left"
+                        className="w-full lg:w-1/2 space-y-4 lg:space-y-8 text-left"
                         data-aos="fade-right"
                         data-aos-delay="200"
                     >
@@ -240,7 +240,7 @@ const Home = () => {
                     </aside>
                     {/* Right Section */}
                     <div
-                        className="w-full lg:w-1/2 h-auto lg:h-[600px] xl:h-[750px] relative flex items-center justify-center"
+                        className="hidden w-full lg:w-1/2 h-auto lg:h-[600px] xl:h-[750px] relative lg:flex items-center justify-center"
                         onMouseEnter={() => setIsHovering(true)}
                         onMouseLeave={() => setIsHovering(false)}
                         data-aos="fade-left"

@@ -113,7 +113,7 @@ const Showcase = () => {
             </div>
 
             {/* Projects Showcase */}
-            <div className="flex flex-col md:flex-row justify-center w-full max-w-7xl mx-auto md:h-[450px] lg:h-[500px] md:space-x-4 space-y-4 md:space-y-0">
+            <div className="flex overflow-x-auto snap-x snap-mandatory flex-nowrap md:flex-row md:overflow-x-visible md:snap-none justify-start md:justify-center w-full max-w-7xl mx-auto md:h-[450px] lg:h-[500px] gap-4 pb-4 md:pb-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
                 {projects.map((project) => {
                     const isActive = activeId === project.id;
                     const isAnyActive = activeId !== null;
@@ -126,7 +126,7 @@ const Showcase = () => {
                             onClick={() => window.open(project.link, "_blank")} // redirect on click
                             style={(() => {
                                 const base = {
-                                    transition: isMobile ? "height 0.4s ease-in-out" : "flex 0.6s ease-in-out",
+                                    transition: "all 0.5s ease-in-out",
                                     backgroundImage: `url(${project.img})`,
                                     backgroundSize: "cover",
                                     backgroundPosition: "center",
@@ -134,7 +134,7 @@ const Showcase = () => {
                                 if (isMobile) {
                                     return {
                                         ...base,
-                                        height: isActive ? 250 : 160,
+                                        height: "350px",
                                     };
                                 }
                                 return {
@@ -142,7 +142,7 @@ const Showcase = () => {
                                     flex: isActive ? 3 : isAnyActive ? 0.8 : 1,
                                 };
                             })()}
-                            className="relative rounded-2xl overflow-hidden shadow-lg cursor-pointer w-full"
+                            className="relative rounded-2xl overflow-hidden shadow-lg cursor-pointer w-[85vw] shrink-0 md:w-full snap-center md:snap-align-none"
                         >
                             {/* Overlay */}
                             <div

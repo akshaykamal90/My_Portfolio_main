@@ -35,7 +35,7 @@ const ProfileImage = memo(() => (
                 <div className="absolute inset-0 bg-gradient-to-t from-blue-600 via-cyan-500 to-teal-400 rounded-full blur-2xl animate-float opacity-50" />
             </div>
 
-            <div className="relative w-72 h-72 sm:w-80 sm:h-80 rounded-full overflow-hidden shadow-[0_0_40px_rgba(120,119,198,0.3)] group-hover:scale-105 transition-all duration-700">
+            <div className="relative w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full overflow-hidden shadow-[0_0_40px_rgba(120,119,198,0.3)] group-hover:scale-105 transition-all duration-700">
                 <div className="absolute inset-0 border-4 border-white/20 rounded-full z-20 group-hover:border-white/40 transition-all duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40 z-10 hidden sm:block group-hover:opacity-0 transition-opacity duration-700" />
                 <div className="absolute inset-0 bg-gradient-to-t from-purple-500/20 via-transparent to-blue-500/20 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-700 hidden sm:block" />
@@ -100,7 +100,7 @@ const AboutPage = () => {
     const statsData = useMemo(() => [], []); // currently empty
 
     return (
-        <div id="About" className="h-auto pb-[10%] text-white overflow-hidden px-[5%] lg:px-[10%] mt-32 md:mt-0">
+        <div id="About" className="h-auto pb-[10%] text-white overflow-hidden px-[5%] lg:px-[10%] mt-16 md:mt-0">
             <Header />
 
             <div className="pt-8 sm:pt-12 mb-0 md:mb-28 ">
@@ -134,7 +134,7 @@ const AboutPage = () => {
                         <div className="pt-4" data-aos="fade-up" data-aos-duration="1000">
                             <a
                                 href="/Akshaykamal.pdf"
-                                download
+                                download="Akshay_Kamal_Resume.pdf"
                                 className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-gradient-to-r from-[#6366f1] to-[#a855f7] font-medium hover:scale-105 transition-all shadow-lg hover:shadow-xl"
                             >
                                 <FileText className="w-5 h-5" />

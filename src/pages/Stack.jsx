@@ -91,14 +91,14 @@ export default function Stack() {
 					</p>
 				</div>
 
-				<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6">
+				<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 sm:gap-6">
 					{icons.map((ic) => (
 						<div
 							key={ic.name}
-							className="flex flex-col items-center justify-center p-6 border border-white/10 rounded-lg bg-white/2"
+							className="flex flex-col items-center justify-center p-4 sm:p-6 border border-white/10 rounded-lg bg-white/2"
 						>
-							<img src={ic.src} alt={ic.name} className="w-14 h-14 mb-3" />
-							<div className="text-sm font-medium">{ic.name}</div>
+							<img src={ic.src} alt={ic.name} className="w-10 h-10 mb-2 sm:w-14 sm:h-14 sm:mb-3" />
+							<div className="text-xs sm:text-sm font-medium text-center">{ic.name}</div>
 						</div>
 					))}
 
