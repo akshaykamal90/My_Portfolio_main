@@ -17,7 +17,7 @@ const TYPING_SPEED = 100;
 const ERASING_SPEED = 50;
 const PAUSE_DURATION = 2000;
 
-const WORDS = ["Passionate Web Devoloper", "Tech Enthusiast"];
+const WORDS = ["Passionate Web Developer", "Tech Enthusiast"];
 const TECH_STACK = ["React", "Javascript", "Tailwind", "Figma", "Adobe XD"];
 
 // Reusable Components
@@ -30,7 +30,7 @@ const StatusBadge = memo(() => (
             <div className="relative px-4 py-2 rounded-full bg-black/40 backdrop-blur-xl border border-white/10 ">
                 <span className="bg-gradient-to-r from-[#6366f1] to-[#a855f7] text-transparent bg-clip-text text-sm font-medium flex items-center ">
                     <Sparkles className="w-4 h-4 mr-2 text-blue-400" />
-                    Ready to Innovate
+                    Available for Work
                 </span>
             </div>
         </div>
@@ -38,19 +38,22 @@ const StatusBadge = memo(() => (
 ));
 
 const MainTitle = memo(() => (
-    <div className="space-y-2" data-aos="fade-up" data-aos-delay="600">
-        <h1 className="font-exo text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight">
+    <div className="space-y-2 text-left" data-aos="fade-up" data-aos-delay="600">
+        <div className="text-2xl sm:text-3xl lg:text-4xl font-exo font-medium text-gray-300">
+            Hi, I'm <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#6366f1] to-[#a855f7]">Akshay Kamal</span>
+        </div>
+        <h1 className="font-exo text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
             <span className="relative inline-block">
                 <span className="absolute -inset-2 bg-gradient-to-r from-[#6366f1] to-[#a855f7] blur-2xl opacity-20" />
                 <span className="relative bg-gradient-to-r from-white via-blue-100 to-purple-200 bg-clip-text text-transparent">
-                    PYTHON Full Stack
+                    React & Django
                 </span>
             </span>
             <br />
             <span className="relative inline-block mt-2">
                 <span className="absolute -inset-2 bg-gradient-to-r from-[#6366f1] to-[#a855f7] blur-2xl opacity-20" />
                 <span className="relative bg-gradient-to-r from-[#6366f1] to-[#a855f7] bg-clip-text text-transparent">
-                    Developer
+                    Full-Stack Developer
                 </span>
             </span>
         </h1>
@@ -133,11 +136,11 @@ const Home = () => {
     return (
         <div className="min-h-screen bg-[#030014] overflow-hidden" id="Home">
             <div className="container mx-auto px-[5%] sm:px-6 lg:px-[10%] min-h-screen">
-                <div className="flex flex-col lg:flex-row items-center justify-center min-h-screen py-24 lg:py-0 md:justify-between gap-12 lg:gap-20">
+                <div className="flex flex-col lg:flex-row items-center justify-center min-h-screen pt-20 md:pt-24 lg:pt-16 pb-4 md:justify-between gap-6 lg:gap-12">
 
                     {/* Left Section */}
                     <div
-                        className="w-full lg:w-1/2 space-y-4 lg:space-y-8 text-left"
+                        className="w-full lg:w-1/2 space-y-4 lg:space-y-6 text-left"
                         data-aos="fade-right"
                         data-aos-delay="200"
                     >
@@ -158,10 +161,10 @@ const Home = () => {
                             data-aos="fade-up"
                             data-aos-delay="1000"
                         >
-                            Passionate Python full stack Developer focused on creating responsive, 
-                            user-friendly interfaces and full-stack applications. Using MySQL ,MongoDB, PYTHON , Django ,
-                            React, HTML, CSS, JavaScript, and Tailwind CSS, I craft clean, interactive
-                              UIs and robust backends for seamless user experiences.
+                            Passionate React & Django Full-Stack Developer focused on creating responsive, 
+                            user-friendly interfaces and scalable full-stack applications. Using React, Django, Python,
+                            MySQL, MongoDB, HTML, CSS, JavaScript, and Tailwind CSS, I craft clean, interactive
+                            UIs and robust backends for seamless user experiences.
                         </p>
                         <div
                             className="flex flex-wrap gap-3"

@@ -3,63 +3,53 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 const projects = [
-
     {
         id: "01",
+        title: "Take Off Holidayz",
+        role: "Travel Agency Client (Freelance)",
+        tools: "React.js, Django, REST APIs",
+        img: "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?q=80&w=1000&auto=format&fit=crop",
+        link: "https://www.takeoffholidayz.in",
+    },
+    {
+        id: "02",
         title: "Randell's Harvest - Omniblend",
-        role: "Web Project/E-Commerce/(# In Progress)",
-        tools: "React, Sql, Python, Google Auth",
+        role: "Web Project/E-Commerce",
+        tools: "React.js, MySQL, Python",
         img: "https://raw.githubusercontent.com/33binil/Portfolio/main/public/img/omniblend.png",
         link: "https://omniblend-v2-1.vercel.app/",
     },
     {
-        id: "02",
+        id: "03",
         title: "Book E-Store",
-        role: "Web Project/Mini ecommerce",
-        tools: "Python, Django, Mysql, React, MongoDB,",
+        role: "Full stack project",
+        tools: "React.js, Django, MySQL, MongoDB",
         img: "/img/bookstore.png",
         link: "https://bookestore.onrender.com",
     },
     {
-        id: "03",
-        title: "Pixel Junkie Creative Studio",
+        id: "04",
+        title: "Astrivix Creative Studio",
         role: "Web design and development",
         tools: "React, Tailwind CSS, Figma",
         img: "https://raw.githubusercontent.com/33binil/Portfolio/main/public/img/pixeljunkie.png",
-        link: "https://pixeljunkiestudio.in",
+        link: "https://www.astrivix.in",
     },
     {
-        id: "04",
+        id: "05",
         title: "Internship Project",
         role: "Web development",
-        tools: "HTML, CSS, ",
+        tools: "HTML, CSS",
         img: "https://raw.githubusercontent.com/33binil/Portfolio/main/public/img/internship.png",
         link: "https://front-end-website-1.vercel.app/",
     },
     {
-        id: "05",
+        id: "06",
         title: "Blood Bank Donation Management System",
         role: "College Project",
         tools: "PHP, Javascript, CSS",
         img: "https://raw.githubusercontent.com/33binil/Portfolio/main/public/img/BBDMS.jpg",
-    },
-    {
-        id: "06",
-        title: "Weather App",
-        role: "Web Project",
-        tools: "Javascript, HTML, CSS",
-        img: "https://raw.githubusercontent.com/33binil/Portfolio/main/public/img/weather.jpg",
-        link: "https://weather-app-coral-seven-64.vercel.app/",
-    },
-    {
-        id: "07",
-        title: "QR Code Generator",
-        role: "Web Project",
-        tools: "Javascript, HTML, CSS",
-        img: "https://raw.githubusercontent.com/33binil/Portfolio/main/public/img/QR.png",
-        link: "https://qr-generator-beta-dusky.vercel.app/",
-    },
-
+    }
 ];
 
 const Showcase = () => {
@@ -113,7 +103,7 @@ const Showcase = () => {
             </div>
 
             {/* Projects Showcase */}
-            <div className="flex overflow-x-auto snap-x snap-mandatory flex-nowrap md:flex-row md:overflow-x-visible md:snap-none justify-start md:justify-center w-full max-w-7xl mx-auto md:h-[450px] lg:h-[500px] gap-4 pb-4 md:pb-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+            <div className="flex flex-col md:flex-row w-full max-w-7xl mx-auto md:h-[450px] lg:h-[500px] gap-6 md:gap-4 pb-4 md:pb-0">
                 {projects.map((project) => {
                     const isActive = activeId === project.id;
                     const isAnyActive = activeId !== null;
@@ -127,41 +117,70 @@ const Showcase = () => {
                             style={(() => {
                                 const base = {
                                     transition: "all 0.5s ease-in-out",
-                                    backgroundImage: `url(${project.img})`,
-                                    backgroundSize: "cover",
-                                    backgroundPosition: "center",
                                 };
                                 if (isMobile) {
                                     return {
                                         ...base,
-                                        height: "350px",
+                                        // Mobile height is determined by flex-col content
                                     };
                                 }
                                 return {
                                     ...base,
+                                    backgroundImage: `url(${project.img})`,
+                                    backgroundSize: "cover",
+                                    backgroundPosition: "center",
                                     flex: isActive ? 3 : isAnyActive ? 0.8 : 1,
                                 };
                             })()}
-                            className="relative rounded-2xl overflow-hidden shadow-lg cursor-pointer w-[85vw] shrink-0 md:w-full snap-center md:snap-align-none"
+                            className="relative flex flex-col md:block rounded-2xl overflow-hidden shadow-lg cursor-pointer w-full shrink-0 bg-white/5 md:bg-transparent border border-white/10 md:border-none"
                         >
-                            {/* Overlay */}
-                            <div
-                                className={`absolute inset-0 bg-black transition-opacity duration-500 ${
-                                    isActive ? "bg-opacity-50" : "bg-opacity-50"
-                                }`}
-                            />
+                            {/* Mobile Image (Desktop uses background image on parent) */}
+                            {isMobile && (
+                                <div 
+                                    className="w-full h-[200px]" 
+                                    style={{ 
+                                        backgroundImage: `url(${project.img})`, 
+                                        backgroundSize: "cover", 
+                                        backgroundPosition: "center" 
+                                    }}
+                                />
+                            )}
+
+                            {/* Overlay for desktop */}
+                            {!isMobile && (
+                                <div
+                                    className={`absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent transition-opacity duration-500 ${
+                                        isActive ? "opacity-100" : "opacity-70"
+                                    }`}
+                                />
+                            )}
 
                             {/* Content */}
                             <div
-                                className={`absolute bottom-0 w-full p-4 text-center text-white transition-all duration-500 ${
-                                    isActive
-                                        ? "opacity-100 translate-y-0"
-                                        : "opacity-0 translate-y-10"
+                                className={`w-full p-4 md:p-6 text-center text-white transition-all duration-500 ${
+                                    isMobile ? "relative block" : "absolute bottom-0 z-10"
                                 }`}
                             >
-                                <h3 className="text-2xl font-bold">{project.title}</h3>
-                                <p className="text-gray-200">{project.role}</p>
-                                <p className="text-sm text-gray-300 mt-2">{project.tools}</p>
+                                <h3 
+                                    className={`text-xl md:text-2xl font-bold transition-transform duration-500 ${
+                                        !isMobile && !isActive ? "translate-y-6" : "translate-y-0"
+                                    }`}
+                                >
+                                    {project.title}
+                                </h3>
+                                
+                                <div 
+                                    className={`transition-all duration-500 overflow-hidden ${
+                                        isMobile 
+                                            ? "opacity-100 max-h-40 mt-1" 
+                                            : isActive 
+                                                ? "opacity-100 max-h-40 mt-1 translate-y-0" 
+                                                : "opacity-0 max-h-0 mt-0 translate-y-4"
+                                    }`}
+                                >
+                                    <p className="text-gray-300 text-sm md:text-base">{project.role}</p>
+                                    <p className="text-xs md:text-sm text-purple-400 mt-2">{project.tools}</p>
+                                </div>
                             </div>
                         </div>
                     );

@@ -5,45 +5,36 @@ import "aos/dist/aos.css";
 
 const experiences = [
     {
-        year: "2024 – Present",
-        role: "Python full stack devoloper, Freelance Service",
+        year: "01/2026 – Present",
+        role: "Frontend Developer",
+        company: "WebOne Pvt Ltd",
+        description:
+            "Migrated existing web applications from Django MVT architecture to React.js frontend, improving UI scalability and maintainability. Converted server-rendered templates into component-based React architecture using hooks. Integrated frontend with backend APIs using Axios / Fetch for seamless data flow. Improved application performance and user experience through optimized rendering and responsive design.",
+    },
+    {
+        year: "09/2024 – 12/2025",
+        role: "Junior Web Developer",
         company: (
             <a
-                href="https://pixeljunkiestudio.in"
+                href="https://www.astrivix.in"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1 hover:underline"
+                className="flex items-center gap-1 hover:underline text-purple-400"
             >
-                Pixel Junkie Creative Studio
+                Astrivix Creative Studio
                 <span>→</span>
             </a>
         ),
         description:
-            "Designed intuitive user interfaces in Figma and developed responsive, interactive frontends using React and Tailwind CSS. Built and integrated full-stack features using Python, Django, and MySQL, ensuring efficient data handling and robust backend functionality. Delivered branding assets, landing pages, and optimized web experiences deployed on platforms like Vercel and Netlify, helping clients strengthen their digital presence.",
-
-},
-    {
-        year: "2024",
-        role: "Python Full stack Devoloper Trainee. ",
-        company: "Smeclabs,Kaloor,Kochi,Kerala",
-        description:
-            "Developed responsive frontends using React and Tailwind CSS, optimized layouts for performance and accessibility, and deployed projects via Git, Vercel, and Netlify. Assisted in creating branding assets and strategic landing pages to enhance client presence.",
+            "Developed a full-stack web application using React.js and Django, handling complete frontend-backend integration. Designed and implemented RESTful APIs using Django REST Framework for seamless data communication. Built role-based authentication systems, improving application security and user access control. Optimized API performance and reduced response time by ~25%.",
     },
     {
-        year: "NOW",
-        role: "Freelance & Upskilling",
-        company: "Freelance",
+        year: "01/2025 – 12/2025",
+        role: "Python Full Stack Developer Intern",
+        company: "SMEC Labs",
         description:
-            "Collaborated with clients to design intuitive UI/UX experiences in Figma and develop responsive, high-performance frontends using React and Tailwind CSS. Integrated backend functionality with Python, Django, and MySQL to deliver seamless, data-driven web applications. Delivered branding assets, interactive prototypes, and modern web interfaces while continually upskilling in design systems, accessibility, and advanced frontend frameworks.",
-    },
-    {
-        year: "NOW",
-        role: "Freelance & Upskilling",
-        company: "Pixel Junkie Creative Studio",
-        description:
-            "Working as a Freelancer at Pixel Junkie Creative Studio, collaborating with clients to design intuitive UI/UX experiences in Figma and develop responsive frontends using React and Tailwind CSS. Integrated backend functionalities with Python, Django, and MySQL to deliver seamless full-stack solutions. Delivered branding assets, interactive prototypes, and modern web interfaces while continually upskilling in design systems, accessibility, and advanced frontend frameworks.",
+            "Built full-stack web applications using React.js, Django, and MySQL. Developed an eCommerce platform with dynamic product management and admin dashboard. Implemented secure authentication features including email verification, password reset, and account lockout. Integrated REST APIs and managed frontend state using React Hooks and Context API.",
     }
-
 ];
 
 export default function Career() {

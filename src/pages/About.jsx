@@ -123,12 +123,21 @@ const AboutPage = () => {
                         </h2>
 
                         <p
-                            className="relative font-exo text-base sm:text-lg lg:text-xl text-gray-400 leading-relaxed text-justify"
+                            className="relative font-exo text-base sm:text-lg lg:text-xl text-gray-400 leading-relaxed text-center lg:text-left"
                             data-aos="fade-right"
                             data-aos-duration="1500"
                         >
-                            I'm a passionate Python full stack devoloper who loves crafting responsive, user-friendly web apps. Using MongoDB, MySQL, Python, Django  React, HTML, CSS, JavaScript, and Tailwind CSS, I design and build clean, interactive UIs with robust backends to deliver seamless user experiences.
+                            I'm a passionate React & Django Full-Stack Developer who loves crafting responsive, user-friendly web apps. Using React, Django, Python, MySQL, MongoDB, HTML, CSS, JavaScript, and Tailwind CSS, I design and build clean, interactive UIs with robust backends to deliver seamless user experiences.
                         </p>
+
+                        {/* ✅ Education */}
+                        <div className="pt-2" data-aos="fade-up" data-aos-duration="1600">
+                            <h3 className="text-xl font-bold text-gray-200 mb-2">Education</h3>
+                            <div className="text-gray-400">
+                                <p className="font-semibold text-purple-400">BSc in Electronics and Computer Science</p>
+                                <p className="text-sm">Bengaluru City University (2021 - 2024)</p>
+                            </div>
+                        </div>
 
                         {/* ✅ Download CV Button */}
                         <div className="pt-4" data-aos="fade-up" data-aos-duration="1000">
